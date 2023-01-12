@@ -1,0 +1,125 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "Protocolo Lilith",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "QuestionIntent",
+          "slots": [
+            {
+              "name": "searchQuery",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{searchQuery}"
+              ]
+            }
+          ],
+          "samples": [
+            "se {searchQuery}",
+            "para {searchQuery}",
+            "quando {searchQuery}",
+            "quem {searchQuery}",
+            "como {searchQuery}",
+            "a pergunta{searchQuery}",
+            "soubre {searchQuery}",
+            "responda a pergunta",
+            "para me ajudar com algo mais",
+            "para me ajudar com uma duvida",
+            "para me ajudar com alguma coisa",
+            "uma pergunta",
+            "para uma pergunta",
+            "Reponsda uma pergunta",
+            "Me responda uma pergunta"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "QuestionIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "searchQuery",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.29691672240.1575270597350"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.604331776974.404371559008",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No que você está pensando?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Me diga o que você gostaria de saber"
+          },
+          {
+            "type": "PlainText",
+            "value": "Olá querido!"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.29691672240.1575270597350",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "E ai?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Como posso te ajudar hoje?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Qual a sua pergunta?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Com certeza. O que gostaria de saber?"
+          },
+          {
+            "type": "PlainText",
+            "value": "claro. No que está pensando?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "19"
+}
